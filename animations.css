@@ -1,0 +1,49 @@
+
+.animationTranslateXLoop{
+  animation: translateX 2s infinite;
+}
+@keyframes translateX{
+  50%{
+    transform: translateX(calc(100% - 40%));
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+
+
+.animationTranslateX--withReverse{
+  animation: TranslateX--withReverse-off 2s forwards;
+}
+
+.transitionElement:hover .animationTranslateX--withReverse{
+  animation: translateX--withReverse--on 2s forwards;
+}
+
+
+.transitionElement:hover .animationTranslateX{
+  animation: translateX 2s;
+}
+
+/* si queremos que la animacion retorne debe ser la inversa de la activa */
+@keyframes translateX--withReverse--on{
+  0%{ 
+    transform: translateX(0px);
+  
+  }
+  100%{ 
+    transform: translateX(400%);
+    background-color: rgb(255, 153, 0);
+  }
+}
+
+@keyframes TranslateX--withReverse-off {
+  0%{ 
+    transform: translateX(400%);
+    background-color: rgb(255, 153, 0);
+  }
+  100%{ 
+    transform: translateX(0px);
+  }
+}

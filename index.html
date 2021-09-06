@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Documentacion Transformaciones y animaciones</h1>
+  <div class="infoBlock">
+    <div class="infoBlock__text">
+      <h2>Transformaciones Directas: </h2>
+      <code>
+        .translate{
+          <div class="tab">
+            transition: transform 0.5s , background-color 1s;
+          </div>
+        }
+        .translateX:hover{
+          <div class="tab">transform : translateX(100px);</div>
+          <div class="tab">background: yellow;</div>
+        }
+      </code>
+      <p>Son animaciones que ocurren por el cambio de propiedad, si el trigger es un hover
+         no sera posible conservar el estado final de la animacion cuando se retire el hover
+         del elemento, su ventaja es que cada propiedad puede tener una transicion diferente
+         ejemplo la velocidad de translate 0.5s y el cambio de color 1s
+      </p>
+    </div>
+    <div class="transitionBlock translate">
+      <div class="transitionElement">
+        <p>Test</p>
+        <div class="circle translateX effectColor"></div>
+      </div>
+      <div class="transitionElement">
+        <p>Test</p>
+        <div class="circle translateY effectColor"></div>
+      </div>
+      <div class="transitionElement">
+        <p>Test</p>
+        <div class="circle translateXY effectColor"></div>
+      </div>
+    </div>
+  </div>
+  <div class="infoBlock">
+    <div class="infoBlock__text">
+      <h2>Transformaciones con animaciones (css-nativo): </h2>
+      <code>
+        .translateX:hover{
+          <div class="tab">animation: name-animation 1s;</div>
+        }
+      </code>
+      <div>
+        Ventajas
+        <ul>
+          <li>Ajustar cada frame especifico</li>
+          <li>loops css nativo</li>
+          <li>trigger no dependiente del elemento</li>
+        </ul>
+        Desventajas
+
+        <ul>
+          <li>Tiempo de transicion igual (hay que calcular segun los frames)</li>
+          <li>Escribir retorno de la animacion</li>
+          <li>Sostener el hover para no cancelar la animacion</li>
+          <li>Casi imposible mantener animacion activa despues de retirar el hover</li>
+        </ul>
+       
+        <a target="_blank" href="https://codepen.io/morewry/pen/GLjpK">Mantener animacion nativa-css</a>
+      </div>
+    </div>
+    <div class="transitionBlock translate">
+      <div class="transitionElement ">
+        <p>TranslateX with Reverse</p>
+        <div class="circle animationTranslateX--withReverse"></div>
+      </div>
+      <div class="transitionElement">
+        <p>TranslateX two ways</p>
+        <div class="wraper animationTranslateX">
+          <div class="circle "></div>
+        </div>
+      </div>
+      <!-- <div class="transitionElement">
+        <p>Test</p>
+        <div class="circle translateXY effectColor"></div>
+      </div> -->
+      <div class="transitionElement">
+        <p>TranslateX Loop</p>
+        <div class="wraper animationTranslateXLoop">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+  <script src="index.js"></script>
+</html>

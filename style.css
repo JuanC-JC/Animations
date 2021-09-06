@@ -1,0 +1,96 @@
+@import url(generals.css);
+@import url(animations.css);
+
+
+.infoBlock{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,500px));
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.tab{
+  margin-left: 20px;
+}
+
+.infoBlock__text{
+  padding: 20px;
+  height: 100%;
+  background: white;
+  border-radius: 5px;
+  min-width: 300px;
+  margin-bottom: 10px;
+}
+
+.infoBlock__text > h2{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.infoBlock__text > p{
+  font-size: 14px;
+}
+
+.transitionBlock{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 20px;
+  min-width: 300px;
+  height: auto;
+  background: white;
+  border-radius: 5px;
+}
+
+.transitionElement{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.transitionElement > *{
+  transition: transform 0.5s ease-in, background-color 1s ease-out;
+}
+
+.transitionElement > p{
+  text-align: center;
+}
+
+.circle{
+  width: 40%;
+  height: 0;
+  padding-bottom: 40%;
+  background-color: rgb(57, 40, 167);
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.translateX:hover{
+  transform: translateX(150%);
+  z-index: 2;
+}
+
+.translateY:hover{
+  transform: translateY(150%);
+  z-index: 2;
+}
+
+.translateXY:hover{
+  z-index: 2;
+  transform: translate(100%,100%);
+}
+
+.effectColor:hover{
+  background-color: rgb(255, 153, 0);
+}
+
+
+.wraper{
+  width: 100%;
+}
+
+
+

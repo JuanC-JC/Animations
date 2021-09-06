@@ -1,0 +1,11 @@
+{
+  "name": "animaciones",
+  "version": "1.0.0",
+  "description": "notes about animations with css'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Juan Camilo - JC <juancchaparro97@gmail.com>",
+  "license": "MIT"
+}
